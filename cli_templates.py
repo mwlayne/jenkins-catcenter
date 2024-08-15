@@ -10,7 +10,9 @@ logger = logging.getLogger(__name__)
 
 
 
-dnac = api.DNACenterAPI()
+#dnac = api.DNACenterAPI()
+dnac = api.DNACenterAPI(username='admin', password='cisco.123', base_url='https://10.1.10.20', verify=False, version='2.3.5.3')
+
 
 today = datetime.today()
 TSTAMP = today.strftime("%Y-%m-%dT%H-%M-%S")
